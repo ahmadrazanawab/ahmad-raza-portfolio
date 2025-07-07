@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react'; // optional icons for toggle
+import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <>
             {/* Top Navbar */}
-            <nav className='flex justify-between px-6 bg-[#E9E8E6] h-20 shadow-md items-center'>
+            <nav className='flex fixed w-full top-0 left-0  justify-between px-6 z-50 bg-[#E9E8E6] h-20 shadow-md items-center'>
                 <Link href="/" className='text-xl font-bold'>Ahmad Raza</Link>
 
                 {/* Hamburger Icon for Mobile/Desktop */}
