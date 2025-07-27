@@ -79,7 +79,7 @@ const Cart = () => {
 
     return (
         <section>
-            <section className="bg-white">
+            <section className="bg-[#D8E2EC]">
                 <div className="mx-auto w-[80%] grid grid-cols-3  gap-6 p-2 rounded-lg">
                     {mySkills.map(({ title, description, icon, img }, idx) => (
                         <div key={idx} className="relative group overflow-hidden hover:scale-105 rounded-lg bg-gradient-to-l from-gray-100 via-white to-gray-100 shadow-md">
