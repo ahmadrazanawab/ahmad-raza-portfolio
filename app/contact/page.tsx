@@ -1,32 +1,26 @@
 "use client";
 import React from 'react';
 import { SubmitHandler, useForm, useFormState } from 'react-hook-form';
-
-interface Iinputs {
-    name: string;
-    email: string;
-    phone: string;
-    message: string;
-}
-
-
+import { contactSchema, contactInput } from '../api/validate-schema/contact-validate';
+import axios from 'axios';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 
 
 const Page = () => {
-    const { register, handleSubmit, reset, control } = useForm<Iinputs>();
-
-    const handleContactForm: SubmitHandler<Iinputs> = async (data) => {
-        await new Promise((resolve) => {
-            setTimeout(() => {
-                resolve("this is resolve ok");
-            }, 5000);
-        })
-        console.log("Form Data: ", data);
-        reset();
+    const { register, handleSubmit, reset, control } = useForm<contactInput>({ resolver: zodResolver(contactSchema) });
+    const { errors, isSubmitting } = useFormState<contactInput>({ control });
+    const handleContactForm: SubmitHandler<contactInput> = async (data: contactInput) => {
+        try {
+            const response = await axios.post('/api/contact-form', data);
+            console.log(response.data.data);
+            reset();
+        } catch (error) {
+            console.log("Form error...", error);
+        }
     }
 
-    const { errors, isSubmitting } = useFormState<Iinputs>({ control });
+
     // bg-[#D8E2EC]
     return (
         <section className="pt-28 px-4  bg-[#D8E2EC]">
@@ -62,7 +56,7 @@ const Page = () => {
                             <div className="w-full">
                                 <input
                                     type="text"
-                                    {...register("name", {
+                                    {...register("fullName", {
                                         required: "Name is required.",
                                         minLength: {
                                             value: 3,
@@ -72,8 +66,8 @@ const Page = () => {
                                     className="border p-3 text-[#014051] rounded-lg w-full"
                                     placeholder="Full Name"
                                 />
-                                {errors.name && (
-                                    <p className="text-sm text-red-400">{errors.name.message}</p>
+                                {errors.fullName && (
+                                    <p className="text-sm text-red-400">{errors.fullName.message}</p>
                                 )}
                             </div>
                             <div className="w-full">
@@ -81,10 +75,6 @@ const Page = () => {
                                     type="text"
                                     {...register("email", {
                                         required: "Email is required.",
-                                        pattern: {
-                                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                            message: "Enter a valid email address",
-                                        },
                                     })}
                                     className="border p-3 rounded-lg w-full"
                                     placeholder="Email"
@@ -151,3 +141,4 @@ const Page = () => {
 };
 
 export default Page;
+

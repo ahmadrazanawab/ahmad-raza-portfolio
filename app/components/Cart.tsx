@@ -93,22 +93,6 @@ const Cart = () => {
                             </div>
                         </div>
                     ))}
-
-
-                    {/* {mySkills.map(({ title, description, icon, img }, idx) => (
-                        <div key={idx} className="relative group overflow-hidden hover:scale-105 rounded-lg bg-gradient-to-l from-gray-100 via-white to-gray-100 shadow-md">
-                            <div className="absolute  cursor-pointer inset-0 z-10 bg-yellow-300 opacity-80 origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out" />
-                            <div className="relative z-9 h-40 w-full rounded-t-lg">
-                                <Image src={img} fill className="object-fill rounded-t-lg" alt="img" />
-                            </div>
-                            <div className="p-5 relative z-30">
-                                <h4 className="text-xl">{icon} {title}</h4>
-                                <p>{description}</p>
-                            </div>
-                        </div>
-                    ))} */}
-
-
                 </div>
             </section>
         </section>
