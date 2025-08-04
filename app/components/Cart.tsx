@@ -80,7 +80,7 @@ const Cart = () => {
     return (
         <section>
             <section className="bg-[#D8E2EC]">
-                <div className="mx-auto w-[80%] grid grid-cols-3  gap-6 p-2 rounded-lg">
+                <div className="mx-auto w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 p-2 rounded-lg">
                     {mySkills.map(({ title, description, icon, img }, idx) => (
                         <div key={idx} className="relative group overflow-hidden hover:scale-105 rounded-lg bg-gradient-to-l from-gray-100 via-white to-gray-100 shadow-md">
                             <div className="absolute  cursor-pointer inset-0 z-10 bg-yellow-300 opacity-80  translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />

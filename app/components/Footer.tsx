@@ -14,7 +14,7 @@ const Footer = () => {
                     </p>
                 </div>
                 <div>
-                    <h4 className="text-xl ml-2 font-semibold text-white mb-2">Contact</h4>
+                    <h4 className="text-xl text-center md:text-start ml-2 font-semibold text-white mb-2">Contact</h4>
                     <address className="not-italic text-sm text-gray-400 leading-relaxed space-y-1">
                         <p>📍 Pune, Maharashtra, India</p>
                         <p>
