@@ -46,7 +46,7 @@ const Cart = () => {
         },
         {
             title: "Tailwind CSS",
-            description: "I build responsive, clean UIs with Tailwind’s utility-first classes, themes, and transitions.",
+            description: "I build responsive, clean UIs with Tailwind&apos;s utility-first classes, themes, and transitions.",
             img: tailwind
         },
         {

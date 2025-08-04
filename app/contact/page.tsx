@@ -30,14 +30,14 @@ const Page = () => {
                     <div className="w-[80%] md:mt-8 mx-auto">
                         <h2 className="text-3xl font-bold text-[#014051] mb-4 text-center">Get in Touch</h2>
                         <p className="text-[#014051] mb-4">
-                            Have a project in mind, a question, or just want to connect? I'm always open to discussing new opportunities, collaborations, or tech ideas.
+                            Have a project in mind, a question, or just want to connect? I&apos;m always open to discussing new opportunities, collaborations, or tech ideas.
                         </p>
                         <p className="text-[#014051] mb-4">
-                            Fill out the form or drop me an email — let's build something amazing together.
+                            Fill out the form or drop me an email — let&apos;s build something amazing together.
                         </p>
                         <ul className="text-[#014051] text-sm space-y-2">
                             <li>📍 Pune, Maharashtra, India</li>
-                            <li>📧 <span className="text-blue-600">ahmad.raza.dev@gmail.com</span></li>
+                            <li>📧 <span className="text-blue-600">ahmadrazanawab@gmail.com</span></li>
                             <li>📞 +91 91234 56789</li>
                         </ul>
                         <p className="text-[#014051] mt-4">

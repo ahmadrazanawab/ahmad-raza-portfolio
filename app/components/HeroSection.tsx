@@ -7,7 +7,7 @@ const HeroSection = () => {
             {/* Left Side Text */}
             <div className="w-full md:w-1/2 text-center md:text-left">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                    Hi, I'm <span className="text-[#34B7A7]">Ahmad Raza</span> 👋
+                    Hi, I&apos;m <span className="text-[#34B7A7]">Ahmad Raza</span> 👋
                 </h1>
                 <h2 className="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">
                     A Passionate Full Stack Developer
