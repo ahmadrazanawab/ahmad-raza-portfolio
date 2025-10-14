@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ahmad from "./assist/ahmad.jpg";
+import Link from "next/link";
 
 const HeroSection = () => {
     return (
@@ -18,19 +19,19 @@ const HeroSection = () => {
                 </p>
                 <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
                     <a
-                        href="/resume.pdf"
+                        href="/https://drive.google.com/file/d/1YoyRkv6-0Dw_ZFCiGfr1Le-ALYSI9i1V/view"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-6 py-3 bg-[#34B7A7] text-white rounded-xl shadow-md hover:bg-[#2fa295] transition"
                     >
                         View Resume
                     </a>
-                    <a
-                        href="#projects"
+                    <Link
+                        href="/project"
                         className="px-6 py-3 border border-[#34B7A7] text-[#34B7A7] rounded-xl shadow-md hover:bg-[#f0fdfa] transition"
                     >
                         See Projects
-                    </a>
+                    </Link>
                 </div>
             </div>
 

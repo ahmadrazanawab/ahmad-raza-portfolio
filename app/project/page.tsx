@@ -12,11 +12,19 @@ interface Project {
 
 const projects: Project[] = [
     {
+        title: "🎓 College Event Management System",
+        icon: "📦",
+        description:
+            "A full-stack web application built using MERN + Next.js, TypeScript, Zod, and JWT to simplify event coordination in colleges. The platform provides role-based access for admins and students. Admins can create, update, and delete events, manage users, and view participant details, while students can browse and register for upcoming events. Implemented JWT authentication for secure login and session handling. Integrated Zod and React Hook Form for type-safe and validated form handling. Designed a modern and responsive interface using Tailwind CSS and ShadCN UI. Data is stored and managed using MongoDB for scalability and efficiency. The project demonstrates expertise in Next.js App Router, API integration, and state management.",
+        liveLink: "https://eventify-one-livid.vercel.app/",
+        githubLink: "https://github.com/ahmadrazanawab/eventify"
+    },
+    {
         title: "iNotebook - Full Stack Note App",
         icon: "📦",
         description:
             "A secure and fully authenticated note-keeping web application built using the MERN Stack. It features full CRUD operations with JWT-based authentication, secure routing, and modular backend API design. The frontend is developed in React with TypeScript for type safety and better developer experience. The backend is built with Node.js and Express, using JSON-based REST APIs for data handling. Users can log in, register, update their notes, and delete them, all within a protected environment. Follows clean folder structure and MVC pattern.",
-        liveLink: "https://your-inotebook-demo-link.com",
+        liveLink: "https://ahmad-raza-notes-app.netlify.app",
         githubLink: "https://github.com/ahmadrazanawab/notes-app"
     },
     {
