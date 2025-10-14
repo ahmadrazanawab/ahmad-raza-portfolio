@@ -12,8 +12,8 @@ interface Project {
 
 const projects: Project[] = [
     {
-        title: "🎓 College Event Management System",
-        icon: "📦",
+        title: "College Event Management System",
+        icon: "🎓",
         description:
             "A full-stack web application built using MERN + Next.js, TypeScript, Zod, and JWT to simplify event coordination in colleges. The platform provides role-based access for admins and students. Admins can create, update, and delete events, manage users, and view participant details, while students can browse and register for upcoming events. Implemented JWT authentication for secure login and session handling. Integrated Zod and React Hook Form for type-safe and validated form handling. Designed a modern and responsive interface using Tailwind CSS and ShadCN UI. Data is stored and managed using MongoDB for scalability and efficiency. The project demonstrates expertise in Next.js App Router, API integration, and state management.",
         liveLink: "https://eventify-one-livid.vercel.app/",
@@ -58,7 +58,7 @@ const ProjectsSection = () => {
                         <h3 className="text-xl relative group-hover:text-[#2d5239] font-semibold text-gray-800 flex items-center gap-2 mb-2">
                             <span>{icon}</span> {title}
                         </h3>
-                        <p className="text-gray-600 text-lg mb-4 relative group-hover:text-black">{description}</p>
+                        <p className="text-gray-600 text-sm mb-4 relative group-hover:text-black">{description}</p>
                         <div className="flex gap-4 text-sm font-medium">
                             <Link
                                 href={liveLink}
