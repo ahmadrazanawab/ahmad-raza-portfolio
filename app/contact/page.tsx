@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { SubmitHandler, useForm, useFormState } from 'react-hook-form';
 import { contactSchema, contactInput } from '../api/validate-schema/contact-validate';
 import axios from 'axios';
@@ -7,14 +7,23 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 
 
+
 const Page = () => {
     const { register, handleSubmit, reset, control } = useForm<contactInput>({ resolver: zodResolver(contactSchema) });
     const { errors, isSubmitting } = useFormState<contactInput>({ control });
+    const [message, setMessage] = useState<string>("");
     const handleContactForm: SubmitHandler<contactInput> = async (data: contactInput) => {
         try {
             const response = await axios.post('/api/contact-form', data);
-            console.log(response.data.data);
+            console.log(response.data);
+            setMessage("Message sent successfully!");
+            if (response.data?.success === true) {
+                setTimeout(() => {
+                    setMessage("");
+                }, 3000);
+            }
             reset();
+
         } catch (error) {
             console.log("Form error...", error);
         }
@@ -121,6 +130,9 @@ const Page = () => {
                                     <p className="text-sm text-red-400">{errors.message.message}</p>
                                 )}
                             </div>
+                            {message && <div className='ml-3'>
+                                <p className='text-green-600'>{message}</p>
+                            </div>}
                         </div>
                         <div className='flex w-full mt-3'>
                             <button
