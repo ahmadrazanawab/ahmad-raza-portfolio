@@ -3,17 +3,19 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
-
+import { GoHome } from "react-icons/go";
+import { FaUser, FaTools, FaProjectDiagram, FaEnvelope } from "react-icons/fa";
+import { LuContactRound } from "react-icons/lu";
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const pathname = usePathname();
     console.log(pathname);
     const navLinks = [
-        { label: "Home", to: "/" },
-        { label: "About", to: "/about" },
-        { label: "Skills", to: "/skills" },
-        { label: "Project", to: "/project" },
-        { label: "Contact Me", to: "/contact" }
+        { label: "Home", to: "/", icon: <GoHome size={25} /> },
+        { label: "About", to: "/about", icon: <FaUser size={25} /> },
+        { label: "Skills", to: "/skills", icon: <FaTools size={25} /> },
+        { label: "Project", to: "/project", icon: <FaProjectDiagram size={25} /> },
+        { label: "Contact Me", to: "/contact", icon: <LuContactRound size={25} /> }
     ];
 
     return (
@@ -57,7 +59,7 @@ const Navbar = () => {
                 className={`fixed top-0 right-0 h-full w-64 bg-white text-gray-800 shadow-lg transform transition-transform duration-300 z-50 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}
             >
                 {/* Close Icon */}
-                <div className="flex justify-end py-4">
+                <div className="flex justify-end py-4 mr-5">
                     <button onClick={() => setIsSidebarOpen(false)}>
                         <X size={24} />
                     </button>
@@ -65,14 +67,14 @@ const Navbar = () => {
 
                 {/* Sidebar Links */}
                 <ul className="flex flex-col  space-y-4">
-                    {navLinks.map(({ label, to }, idx) => (
+                    {navLinks.map(({ label, to, icon }, idx) => (
                         <li key={idx}>
                             <Link
                                 href={to}
-                                className={`block py-2 px-4 rounded-b-md ${pathname === to ? "bg-gray-100 text-[#34B7A7]" : ""} border-b border-gray-700`}
+                                className={`block  py-2 px-4  ${pathname === to ? "bg-gray-100 text-[#34B7A7]" : ""}`}
                                 onClick={() => setIsSidebarOpen(false)}
                             >
-                                {label}
+                                <p className='flex items-center'><span className='mx-1'>{icon}</span> <span>{label}</span></p>
                             </Link>
                         </li>
                     ))}
