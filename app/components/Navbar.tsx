@@ -11,11 +11,11 @@ const Navbar = () => {
     const pathname = usePathname();
     console.log(pathname);
     const navLinks = [
-        { label: "Home", to: "/", icon: <GoHome size={25} /> },
-        { label: "About", to: "/about", icon: <FaUser size={25} /> },
-        { label: "Skills", to: "/skills", icon: <FaTools size={25} /> },
-        { label: "Project", to: "/project", icon: <FaProjectDiagram size={25} /> },
-        { label: "Contact Me", to: "/contact", icon: <LuContactRound size={25} /> }
+        { label: "Home", to: "/", icon: <GoHome size={20} /> },
+        { label: "About", to: "/about", icon: <FaUser size={20} /> },
+        { label: "Skills", to: "/skills", icon: <FaTools size={20} /> },
+        { label: "Project", to: "/project", icon: <FaProjectDiagram size={20} /> },
+        { label: "Contact Me", to: "/contact", icon: <LuContactRound size={20} /> }
     ];
 
     return (
