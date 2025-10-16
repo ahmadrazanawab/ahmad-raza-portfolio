@@ -21,9 +21,8 @@ const Page = () => {
                 setTimeout(() => {
                     setMessage("");
                 }, 3000);
+                reset();
             }
-            reset();
-
         } catch (error) {
             console.log("Form error...", error);
         }

@@ -1,6 +1,7 @@
 // app/components/Footer.tsx
 
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
     return (
@@ -42,24 +43,24 @@ const Footer = () => {
                 {/* Center: Nav Links */}
                 <ul className="flex flex-wrap gap-4 justify-center text-sm text-gray-300">
                     <li>
-                        <a href="#home" className="hover:text-[#34B7A7] transition">
+                        <Link href="/" className="hover:text-[#34B7A7] transition">
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#about" className="hover:text-[#34B7A7] transition">
+                        <Link href="/about" className="hover:text-[#34B7A7] transition">
                             About
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#projects" className="hover:text-[#34B7A7] transition">
+                        <Link href="/project" className="hover:text-[#34B7A7] transition">
                             Projects
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#contact" className="hover:text-[#34B7A7] transition">
+                        <Link href="/contact" className="hover:text-[#34B7A7] transition">
                             Contact
-                        </a>
+                        </Link>
                     </li>
                 </ul>
 

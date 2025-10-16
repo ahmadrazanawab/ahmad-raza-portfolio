@@ -16,7 +16,7 @@ export default function AboutPage() {
         </h1>
 
         <p className="text-lg mb-4 leading-relaxed">
-          Hi 👋 I am a <span className="font-semibold">Full Stack Developer</span> with 6 months of experience
+          Hi 👋 I&apos;m a <span className="font-semibold">Full Stack Developer</span> with 6 months of experience
           building dynamic and responsive web applications. I work primarily
           with the <span className="font-semibold">MERN stack</span> and enjoy using{" "}
           <span className="font-semibold">Next.js</span>,{" "}
