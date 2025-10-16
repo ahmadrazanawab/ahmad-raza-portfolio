@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { GoHome } from "react-icons/go";
-import { FaUser, FaTools, FaProjectDiagram, FaEnvelope } from "react-icons/fa";
+import { FaUser, FaTools, FaProjectDiagram } from "react-icons/fa";
 import { LuContactRound } from "react-icons/lu";
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
