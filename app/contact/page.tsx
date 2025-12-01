@@ -31,24 +31,24 @@ const Page = () => {
 
     // bg-[#D8E2EC]
     return (
-        <section className="pt-28 px-4  bg-[#D8E2EC]">
-            <div className="flex flex-col md:flex-row gap-6">
+        <section className="pt-28 px-4 bg-gradient-to-b from-teal-50 via-white to-white">
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 md:gap-10">
                 {/* Left Side Text */}
                 <div className="w-full md:w-1/2">
-                    <div className="w-[80%] md:mt-8 mx-auto">
-                        <h2 className="text-3xl font-bold text-[#014051] mb-4 text-center">Get in Touch</h2>
-                        <p className="text-[#014051] mb-4">
+                    <div className="w-[85%] md:w-[90%] md:mt-10 mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-center bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">Get in Touch</h2>
+                        <p className="text-gray-700 mb-4">
                             Have a project in mind, a question, or just want to connect? I&apos;m always open to discussing new opportunities, collaborations, or tech ideas.
                         </p>
-                        <p className="text-[#014051] mb-4">
+                        <p className="text-gray-700 mb-4">
                             Fill out the form or drop me an email — let&apos;s build something amazing together.
                         </p>
-                        <ul className="text-[#014051] text-sm space-y-2">
+                        <ul className="text-gray-700 text-sm space-y-2">
                             <li>📍 Pune, Maharashtra, India</li>
                             <li>📧 <span className="text-blue-600">ahmadrazanawab@gmail.com</span></li>
                             <li>📞 +91 91234 56789</li>
                         </ul>
-                        <p className="text-[#014051] mt-4">
+                        <p className="text-gray-700 mt-4">
                             I usually respond within 24–48 hours. Thanks for stopping by!
                         </p>
                     </div>
@@ -58,7 +58,7 @@ const Page = () => {
                 <div className="w-full md:w-1/2 mb-5">
                     <form
                         onSubmit={handleSubmit(handleContactForm)}
-                        className="bg-[#FAFAFA] p-6 rounded-lg md:w-[90%]  mx-auto"
+                        className="bg-white/80 backdrop-blur border border-black/5 shadow-sm p-6 md:p-8 rounded-2xl md:w-[90%]  mx-auto"
                     >
                         <div className="grid grid-cols-1 gap-4">
                             <div className="w-full">
@@ -71,11 +71,11 @@ const Page = () => {
                                             message: "Name must be at least 3 characters.",
                                         },
                                     })}
-                                    className="border p-3 text-[#014051] rounded-lg w-full"
+                                    className="w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500/40 focus:border-teal-500/50 transition"
                                     placeholder="Full Name"
                                 />
                                 {errors.fullName && (
-                                    <p className="text-sm text-red-400">{errors.fullName.message}</p>
+                                    <p className="mt-1 text-sm text-red-500">{errors.fullName.message}</p>
                                 )}
                             </div>
                             <div className="w-full">
@@ -84,11 +84,11 @@ const Page = () => {
                                     {...register("email", {
                                         required: "Email is required.",
                                     })}
-                                    className="border p-3 rounded-lg w-full"
+                                    className="w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500/40 focus:border-teal-500/50 transition"
                                     placeholder="Email"
                                 />
                                 {errors.email && (
-                                    <p className="text-sm text-red-400">{errors.email.message}</p>
+                                    <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
                                 )}
                             </div>
                             <div className="w-full">
@@ -101,11 +101,11 @@ const Page = () => {
                                             message: "Enter a valid 10-digit Indian phone number",
                                         },
                                     })}
-                                    className="border p-3 rounded-lg w-full"
+                                    className="w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500/40 focus:border-teal-500/50 transition"
                                     placeholder="Phone Number"
                                 />
                                 {errors.phone && (
-                                    <p className="text-sm text-red-400">{errors.phone.message}</p>
+                                    <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>
                                 )}
                             </div>
                             <div className="w-full">
@@ -122,23 +122,22 @@ const Page = () => {
                                         },
                                     })}
                                     rows={6}
-                                    className="border p-3 rounded-lg w-full"
+                                    className="w-full min-h-[140px] rounded-xl border border-black/10 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500/40 focus:border-teal-500/50 transition"
                                     placeholder="Write Message..."
                                 />
                                 {errors.message && (
-                                    <p className="text-sm text-red-400">{errors.message.message}</p>
+                                    <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
                                 )}
                             </div>
                             {message && <div className='ml-3'>
-                                <p className='text-green-600'>{message}</p>
+                                <p className='inline-block rounded-md border border-green-200 bg-green-50 px-3 py-2 text-green-700'>{message}</p>
                             </div>}
                         </div>
                         <div className='flex w-full mt-3'>
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className={`border p-3 mx-auto rounded-xl bg-black text-white w-full cursor-pointer hover:bg-white hover:text-black hover:border  ${isSubmitting ? "text-red-300" : ""
-                                    }`}
+                                className={`inline-flex items-center justify-center w-full px-4 py-3 mx-auto rounded-xl font-medium bg-teal-600 text-white hover:bg-teal-700 active:bg-teal-800 disabled:opacity-60 disabled:cursor-not-allowed transition ${isSubmitting ? "opacity-80" : ""}`}
                             >
                                 {isSubmitting ? "Submitting..." : "Send Message"}
                             </button>

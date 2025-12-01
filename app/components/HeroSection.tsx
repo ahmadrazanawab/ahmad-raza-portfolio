@@ -1,49 +1,74 @@
-import Image from "next/image";
-import ahmad from "./assist/ahmad.jpg";
 import Link from "next/link";
 
 const HeroSection = () => {
     return (
-        <section className="min-h-screen flex bg-[#D8E2EC] flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-10">
+        <section className="relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center px-6 md:px-10 lg:px-16 pt-24 pb-12 bg-gradient-to-b from-teal-50 via-white to-white">
+            
+            <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+                <div className="absolute top-8 -left-8 w-56 h-56 md:w-72 md:h-72 rounded-full bg-emerald-200/40 blur-3xl" />
+                <div className="absolute bottom-8 -right-8 w-56 h-56 md:w-72 md:h-72 rounded-full bg-teal-200/40 blur-3xl" />
+            </div>
             {/* Left Side Text */}
-            <div className="w-full md:w-1/2 text-center md:text-left">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                    Hi, I&apos;m <span className="text-[#34B7A7]">Ahmad Raza</span> 👋
+            <div className="w-full text-center md:text-left max-w-2xl mx-auto">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 mb-3">
+                    <span className="whitespace-nowrap">Hi, I&apos;m <span className="inline-flex items-center gap-2"><span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Ahmad Raza</span><span aria-hidden="true">👋</span></span></span>
                 </h1>
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">
+                <div className="h-1 w-20 mx-auto md:mx-0 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-3" />
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-600 mb-2">
                     A Passionate Full Stack Developer
                 </h2>
-                <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                    Specializing in MERN Stack, TypeScript, and SQL. I build scalable web
+                <p className="text-sm md:text-base text-gray-600 mb-4">Currently working • 6 months experience</p>
+                <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
+                    Specializing in MERN Stack + Next.js, TypeScript, and SQL. I build scalable web
                     applications with modern and clean architecture.
                 </p>
-                <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
+                    {[
+                        "TypeScript",
+                        "Next.js",
+                        "React",
+                        "Node.js",
+                        "MongoDB",
+                        "TailwindCSS",
+                    ].map((item) => (
+                        <span
+                            key={item}
+                            className="px-3 py-1.5 rounded-full text-xs font-medium bg-white border border-black/5 shadow-sm hover:border-teal-200 hover:bg-teal-50/50 transition"
+                        >
+                            {item}
+                        </span>
+                    ))}
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
                     <a
                         href="/ahmadResume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-6 py-3 bg-[#34B7A7] text-white rounded-xl shadow-md hover:bg-[#2fa295] transition"
+                        className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-teal-600 text-white shadow-sm hover:bg-teal-700 active:bg-teal-800 transition"
                     >
                         View Resume
                     </a>
                     <Link
                         href="/project"
-                        className="px-6 py-3 border border-[#34B7A7] text-[#34B7A7] rounded-xl shadow-md hover:bg-[#f0fdfa] transition"
+                        className="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-teal-600 text-teal-700 hover:text-white hover:bg-teal-600 transition"
                     >
                         See Projects
                     </Link>
                 </div>
-            </div>
-
-            {/* Right Side Image */}
-            <div className="relative  w-full md:w-1/2 flex justify-center md:mt-0 mt-10 mb-8 md:mb-0">
-                <Image
-                    src={ahmad} // put your image in /public/profile.jpg
-                    alt="Ahmad Raza"
-                    width={300}
-                    height={300}
-                    className="rounded-full object-cover"
-                />
+                <div className="mt-6 grid grid-cols-3 gap-3 max-w-sm mx-auto md:mx-0 text-center md:text-left">
+                    <div className="rounded-lg border border-black/5 bg-white px-3 py-2 shadow-sm hover:shadow-md transition">
+                        <p className="text-xl font-bold text-gray-900">6 months</p>
+                        <p className="text-xs text-gray-600">Experience</p>
+                    </div>
+                    <div className="rounded-lg border border-black/5 bg-white px-3 py-2 shadow-sm hover:shadow-md transition">
+                        <p className="text-xl font-bold text-gray-900">10+</p>
+                        <p className="text-xs text-gray-600">Projects</p>
+                    </div>
+                    <div className="rounded-lg border border-black/5 bg-white px-3 py-2 shadow-sm hover:shadow-md transition">
+                        <p className="text-xl font-bold text-gray-900">Currently</p>
+                        <p className="text-xs text-gray-600">Working</p>
+                    </div>
+                </div>
             </div>
         </section>
     );

@@ -79,18 +79,22 @@ const Cart = () => {
 // testing
     return (
         <section>
-            <section className="bg-[#D8E2EC]">
-                <div className="mx-auto w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 p-2 rounded-lg">
+            <section className="bg-gradient-to-b from-teal-50 via-white to-white">
+                <div className="mx-auto w-[90%] md:w-[85%] lg:w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 py-4">
                     {mySkills.map(({ title, description, icon, img }, idx) => (
-                        <div key={idx} className="relative group overflow-hidden hover:scale-105 rounded-lg bg-gradient-to-l from-gray-100 via-white to-gray-100 shadow-md">
-                            <div className="absolute  cursor-pointer inset-0 z-10 bg-yellow-300 opacity-80  translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
-                            <div className="relative z-9 h-40 w-full rounded-t-lg">
-                                <Image src={img} fill className="object-fill rounded-t-lg" alt="img" />
+                        <div
+                            key={idx}
+                            className="relative group overflow-hidden rounded-xl border border-black/5 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/0 via-emerald-400/0 to-teal-500/0 group-hover:from-teal-500/5 group-hover:via-emerald-400/5 group-hover:to-teal-500/5 transition-opacity" />
+                            <div className="relative h-44 w-full rounded-t-xl overflow-hidden">
+                                <Image src={img} fill className="object-cover" alt="img" />
                             </div>
-                            <div className="p-5 relative z-20">
-                                <h4 className="text-xl">{icon} {title}</h4>
-                                <p>{description}</p>
+                            <div className="p-5">
+                                <h4 className="text-lg font-semibold text-gray-900 flex items-center gap-2">{icon} {title}</h4>
+                                <p className="mt-2 text-sm text-gray-700 leading-relaxed">{description}</p>
                             </div>
+                            <div className="pointer-events-none absolute inset-0 rounded-xl ring-0 ring-teal-500/0 group-hover:ring-2 group-hover:ring-teal-500/20 transition" />
                         </div>
                     ))}
                 </div>

@@ -39,45 +39,45 @@ const projects: Project[] = [
 
 const ProjectsSection = () => {
     return (
-        <section id="projects" className="bg-gray-50 px-6 md:px-16 py-16 mt-20">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-                🚀 Projects
-            </h2>
+        <section id="projects" className="bg-gradient-to-b from-teal-50 via-white to-white px-6 md:px-10 lg:px-16 py-16 mt-20">
+            <div className="max-w-6xl mx-auto">
+                <h2 className="text-center text-3xl md:text-4xl font-extrabold tracking-tight mb-12">
+                    <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">🚀 Projects</span>
+                </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {projects.map(({ title, icon, description, liveLink, githubLink }, index) => (
-                    <div
-                        key={index}
-                        className="relative group overflow-hidden hover:scale-105 bg-white shadow-md rounded-xl p-6 transition hover:shadow-lg"
-                    >
-                        <div className="absolute flex inset-0 z-0 cursor-pointer">
-                            <div className="w-1/2  bg-amber-300 opacity-80 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 " />
-                            <div className="w-1/2  bg-amber-300 opacity-80 translate-x-full group-hover:translate-x-0 transition-transform duration-500 " />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    {projects.map(({ title, icon, description, liveLink, githubLink }, index) => (
+                        <div
+                            key={index}
+                            className="relative group overflow-hidden rounded-xl border border-black/5 bg-white p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
+                        >
+                            <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-teal-500/0 via-emerald-400/0 to-teal-500/0 group-hover:from-teal-500/5 group-hover:via-emerald-400/5 group-hover:to-teal-500/5 transition-opacity" />
+
+                            <h3 className="text-xl font-semibold text-gray-900 flex items-center gap-2 mb-2">
+                                <span>{icon}</span> {title}
+                            </h3>
+                            <p className="text-sm text-gray-700 leading-relaxed mb-4">{description}</p>
+                            <div className="flex gap-4 text-sm font-medium">
+                                <Link
+                                    href={liveLink}
+                                    target="_blank"
+                                    className="flex items-center gap-1 text-teal-700 hover:text-teal-800 hover:underline"
+                                >
+                                    🔗 Live Demo <ExternalLink size={14} />
+                                </Link>
+                                <Link
+                                    href={githubLink}
+                                    target="_blank"
+                                    className="flex items-center gap-1 text-gray-600 hover:text-gray-800 hover:underline"
+                                >
+                                    🔗 GitHub <ExternalLink size={14} />
+                                </Link>
+                            </div>
+                            <div className="pointer-events-none absolute inset-0 rounded-xl ring-0 ring-teal-500/0 group-hover:ring-2 group-hover:ring-teal-500/20 transition" />
                         </div>
+                    ))}
 
-                        <h3 className="text-xl relative group-hover:text-[#2d5239] font-semibold text-gray-800 flex items-center gap-2 mb-2">
-                            <span>{icon}</span> {title}
-                        </h3>
-                        <p className="text-gray-600 text-sm mb-4 relative group-hover:text-black">{description}</p>
-                        <div className="flex gap-4 text-sm font-medium">
-                            <Link
-                                href={liveLink}
-                                target="_blank"
-                                className="flex relative items-center gap-1 text-[#34B7A7] group-hover:text-[#34B7A7] hover:underline"
-                            >
-                                🔗 Live Demo <ExternalLink size={14} />
-                            </Link>
-                            <Link
-                                href={githubLink}
-                                target="_blank"
-                                className="flex relative items-center gap-1 group-hover:text-black text-gray-600 hover:underline"
-                            >
-                                🔗 GitHub <ExternalLink size={14} />
-                            </Link>
-                        </div>
-                    </div>
-                ))}
-
+                </div>
             </div>
         </section>
     );
