@@ -3,7 +3,7 @@ import Link from "next/link";
 const HeroSection = () => {
     return (
         <section className="relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center px-6 md:px-10 lg:px-16 pt-20 md:pt-24 pb-12 bg-gradient-to-b from-teal-50 via-white to-white">
-            
+
             <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute top-8 -left-8 w-56 h-56 md:w-72 md:h-72 rounded-full bg-emerald-200/40 blur-3xl" />
                 <div className="absolute bottom-8 -right-8 w-56 h-56 md:w-72 md:h-72 rounded-full bg-teal-200/40 blur-3xl" />
@@ -41,7 +41,7 @@ const HeroSection = () => {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
                     <a
-                        href="/ahmadResume.pdf"
+                        href="/resume/Md-Ahmad-Raza-2026.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-teal-600 text-white shadow-sm hover:bg-teal-700 active:bg-teal-800 transition"
@@ -57,11 +57,11 @@ const HeroSection = () => {
                 </div>
                 <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 w-full max-w-sm mx-auto md:mx-0 text-center md:text-left">
                     <div className="rounded-lg border border-black/5 bg-white px-3 py-2 shadow-sm hover:shadow-md transition">
-                        <p className="text-xl font-bold text-gray-900">6 months</p>
+                        <p className="text-xl font-bold text-gray-900">8 months</p>
                         <p className="text-xs text-gray-600">Experience</p>
                     </div>
                     <div className="rounded-lg border border-black/5 bg-white px-3 py-2 shadow-sm hover:shadow-md transition">
-                        <p className="text-xl font-bold text-gray-900">10+</p>
+                        <p className="text-xl font-bold text-gray-900">20+</p>
                         <p className="text-xs text-gray-600">Projects</p>
                     </div>
                     <div className="rounded-lg border border-black/5 bg-white px-3 py-2 shadow-sm hover:shadow-md transition">
