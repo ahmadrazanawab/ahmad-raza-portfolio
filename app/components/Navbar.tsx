@@ -109,7 +109,7 @@ const Navbar = () => {
                         const isActive = pathname === to;
                         return (
                             <li key={idx}>
-                                <a
+                                <Link
                                     href={to}
                                     onClick={handleNavClick}
                                     className={`flex items-center gap-3 px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${isActive
@@ -122,7 +122,7 @@ const Navbar = () => {
                                     {isActive && (
                                         <div className="ml-auto w-2 h-2 rounded-full bg-teal-500" />
                                     )}
-                                </a>
+                                </Link>
                             </li>
                         );
                     })}
@@ -130,13 +130,13 @@ const Navbar = () => {
 
                 {/* CTA Button - Mobile */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 border-t border-gray-200 bg-white/50 backdrop-blur">
-                    <a
+                    <Link
                         href="/contact"
                         onClick={() => setIsSidebarOpen(false)}
                         className="block w-full text-center px-4 py-3 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     >
                         Get In Touch
-                    </a>
+                    </Link>
                 </div>
             </div>
 
