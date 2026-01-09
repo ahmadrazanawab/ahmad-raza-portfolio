@@ -103,7 +103,7 @@ const HeroSection = () => {
                         {/* Social Links */}
                         <div className="flex gap-4">
                             <a
-                                href="https://github.com"
+                                href="https://github.com/ahmadrazanawab/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-lg bg-white border border-gray-300 flex items-center justify-center text-gray-700 hover:bg-teal-50 hover:border-teal-400 hover:text-teal-600 transition-all duration-300 shadow-sm"
@@ -111,7 +111,7 @@ const HeroSection = () => {
                                 <Github className="w-5 h-5" />
                             </a>
                             <a
-                                href="https://linkedin.com"
+                                href="https://www.linkedin.com/feed/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-lg bg-white border border-gray-300 flex items-center justify-center text-gray-700 hover:bg-cyan-50 hover:border-cyan-400 hover:text-cyan-600 transition-all duration-300 shadow-sm"
@@ -119,7 +119,7 @@ const HeroSection = () => {
                                 <Linkedin className="w-5 h-5" />
                             </a>
                             <a
-                                href="mailto:contact@example.com"
+                                href="mailto:ahmadrazanawab@gmail.com"
                                 className="w-10 h-10 rounded-lg bg-white border border-gray-300 flex items-center justify-center text-gray-700 hover:bg-blue-50 hover:border-blue-400 hover:text-blue-600 transition-all duration-300 shadow-sm"
                             >
                                 <Mail className="w-5 h-5" />
