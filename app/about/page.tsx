@@ -3,105 +3,260 @@
 import { motion } from "framer-motion";
 
 export default function AboutPage() {
-  return (
-    <div className="min-h-[calc(100vh-5rem)] bg-gradient-to-b from-teal-50 via-white to-white text-gray-800 flex flex-col items-center pt-24 pb-16 px-6">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="max-w-3xl text-center"
-      >
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-          About Me
-        </h1>
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
 
-        <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
-          Hi 👋 I&apos;m a <span className="font-semibold">Full Stack Developer</span> with 6 months of experience
-          building dynamic and responsive web applications. I work primarily
-          with the <span className="font-semibold">MERN stack</span> and enjoy using{" "}
-          <span className="font-semibold">Next.js</span>,{" "}
-          <span className="font-semibold">TypeScript</span>, and{" "}
-          <span className="font-semibold">PostgreSQL</span> to craft clean,
-          efficient, and scalable solutions.
-        </p>
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5 }
+        }
+    };
 
-        <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
-          I love creating seamless user experiences and robust backend systems.
-          I’ve also worked with tools like <span className="font-semibold">Cloudinary</span> for media management
-          and <span className="font-semibold">Git</span> for version control.
-          My focus is on writing maintainable code and building applications that
-          solve real-world problems.
-        </p>
+    return (
+        <div className="min-h-screen bg-white">
+            {/* Hero Section */}
+            <section className="relative bg-gradient-to-br mt-10 from-slate-50 via-white to-teal-50/30 pt-20 pb-4 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="text-center"
+                    >
+                        <h1 className="text-2xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-2">
+                            Full Stack Developer
+                        </h1>
+                        <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            Crafting scalable web applications with modern technologies and a passion for clean, efficient code
+                        </p>
+                    </motion.div>
+                </div>
+            </section>
 
-        <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-          I’m constantly learning and exploring new technologies to improve my
-          craft. My goal is to grow as a developer and contribute to impactful
-          projects that make a difference.
-        </p>
+            {/* Main Content */}
+            <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12"
+                    >
+                        {/* Left Column - About */}
+                        <motion.div variants={itemVariants} className="lg:col-span-2 space-y-8">
+                            <div>
+                                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">About Me</h2>
+                                <div className="space-y-4 text-gray-700 leading-relaxed">
+                                    <p className="text-base sm:text-lg">
+                                        I&apos;m a dedicated Full Stack Developer with 9+ months of hands-on experience building modern, responsive web applications. My expertise lies in the MERN stack, complemented by proficiency in Next.js, TypeScript, and PostgreSQL.
+                                    </p>
+                                    <p className="text-base sm:text-lg">
+                                        What drives me is the intersection of elegant user interfaces and robust backend architecture. I believe that great software isn&apos;t just functional—it&apos;s intuitive, performant, and maintainable. Every line of code I write is an opportunity to solve real problems and create meaningful digital experiences.
+                                    </p>
+                                    <p className="text-base sm:text-lg">
+                                        Beyond technical skills, I bring a growth mindset and collaborative spirit to every project. I&apos;m constantly exploring emerging technologies, refining best practices, and contributing to the developer community. My goal is to build software that makes a tangible impact while continuously evolving as an engineer.
+                                    </p>
+                                </div>
+                            </div>
 
-        <div className="mt-10">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-900">Technical Skills</h2>
-          <div className="flex flex-wrap justify-center gap-2.5">
-            {[
-              "MongoDB",
-              "Express.js",
-              "React.js",
-              "Next.js",
-              "Node.js",
-              "TypeScript",
-              "PostgreSQL",
-              "Cloudinary",
-              "Git",
-            ].map((skill) => (
-              <span
-                key={skill}
-                className="bg-white border border-black/5 shadow-sm px-4 py-2 rounded-2xl text-sm font-medium hover:shadow-md hover:border-teal-200 hover:bg-teal-50/50 transition"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
+                            {/* Technical Expertise */}
+                            <div>
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Technical Expertise</h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-xl p-6">
+                                        <h4 className="text-sm font-semibold text-teal-600 uppercase tracking-wide mb-4">Frontend</h4>
+                                        <div className="flex flex-wrap gap-2">
+                                            {["React.js", "Next.js", "TypeScript", "TailwindCSS", "Framer Motion"].map((skill) => (
+                                                <span key={skill} className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium">
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-xl p-6">
+                                        <h4 className="text-sm font-semibold text-teal-600 uppercase tracking-wide mb-4">Backend</h4>
+                                        <div className="flex flex-wrap gap-2">
+                                            {["Node.js", "Express.js", "MongoDB", "PostgreSQL", "REST APIs"].map((skill) => (
+                                                <span key={skill} className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium">
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-xl p-6">
+                                        <h4 className="text-sm font-semibold text-teal-600 uppercase tracking-wide mb-4">Tools & Platforms</h4>
+                                        <div className="flex flex-wrap gap-2">
+                                            {["Git", "GitHub", "Cloudinary", "Vercel", "Postman"].map((skill) => (
+                                                <span key={skill} className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium">
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-xl p-6">
+                                        <h4 className="text-sm font-semibold text-teal-600 uppercase tracking-wide mb-4">Practices</h4>
+                                        <div className="flex flex-wrap gap-2">
+                                            {["Responsive Design", "RESTful APIs", "Version Control", "Agile", "Code Review"].map((skill) => (
+                                                <span key={skill} className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium">
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* Right Column - Highlights */}
+                        <motion.div variants={itemVariants} className="space-y-6">
+                            {/* Experience Card */}
+                            <div className="bg-gradient-to-br from-teal-50 to-white border border-teal-100 rounded-xl p-6 shadow-sm">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center">
+                                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-gray-900">Experience</h3>
+                                </div>
+                                <ul className="space-y-3 text-sm text-gray-700">
+                                    <li className="flex gap-2">
+                                        <span className="text-teal-600 font-bold">•</span>
+                                        <span>9+ months of professional development experience</span>
+                                    </li>
+                                    <li className="flex gap-2">
+                                        <span className="text-teal-600 font-bold">•</span>
+                                        <span>Built full-stack applications from concept to deployment</span>
+                                    </li>
+                                    <li className="flex gap-2">
+                                        <span className="text-teal-600 font-bold">•</span>
+                                        <span>Implemented complex form validations with React Hook Form and Zod</span>
+                                    </li>
+                                    <li className="flex gap-2">
+                                        <span className="text-teal-600 font-bold">•</span>
+                                        <span>Designed RESTful APIs with proper authentication and validation</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Core Values Card */}
+                            <div className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-10 h-10 bg-gray-900 rounded-lg flex items-center justify-center">
+                                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-gray-900">Core Values</h3>
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                    {["Clean Code", "User-Centric", "Performance", "Accessibility", "Collaboration", "Continuous Learning"].map((value) => (
+                                        <span key={value} className="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-700">
+                                            {value}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Currently Learning Card */}
+                            <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-xl p-6 shadow-sm">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-gray-900">Currently Learning</h3>
+                                </div>
+                                <ul className="space-y-2 text-sm text-gray-700">
+                                    <li className="flex gap-2">
+                                        <span className="text-blue-600">→</span>
+                                        <span>Advanced TypeScript patterns and generics</span>
+                                    </li>
+                                    <li className="flex gap-2">
+                                        <span className="text-blue-600">→</span>
+                                        <span>Next.js performance optimization techniques</span>
+                                    </li>
+                                    <li className="flex gap-2">
+                                        <span className="text-blue-600">→</span>
+                                        <span>Database indexing and query optimization</span>
+                                    </li>
+                                    <li className="flex gap-2">
+                                        <span className="text-blue-600">→</span>
+                                        <span>Testing with Vitest and Jest</span>
+                                    </li>
+                                    <li className="flex gap-2">
+                                        <span className="text-blue-600">→</span>
+                                        <span>CI/CD pipelines and DevOps fundamentals</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+
+                    {/* Stats Section */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.6 }}
+                        className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6"
+                    >
+                        {[
+                            { number: "9+", label: "Months Experience" },
+                            { number: "15+", label: "Projects Completed" },
+                            { number: "10+", label: "Technologies Mastered" },
+                            { number: "100%", label: "Commitment to Quality" }
+                        ].map((stat, index) => (
+                            <div key={index} className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-xl p-6 text-center">
+                                <div className="text-3xl sm:text-4xl font-bold text-teal-600 mb-2">{stat.number}</div>
+                                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+                            </div>
+                        ))}
+                    </motion.div>
+
+                    {/* CTA Section */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.7, duration: 0.6 }}
+                        className="mt-16 bg-gradient-to-r from-teal-600 to-teal-500 rounded-2xl p-8 sm:p-12 text-center"
+                    >
+                        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+                            Let&apos;s Build Something Amazing Together
+                        </h2>
+                        <p className="text-teal-50 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+                            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a
+                                href="/project"
+                                className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-teal-600 font-semibold rounded-xl hover:bg-gray-50 transition-colors shadow-lg"
+                            >
+                                View My Projects
+                            </a>
+                            <a
+                                href="/contact"
+                                className="inline-flex items-center justify-center px-8 py-3.5 bg-teal-700 text-white font-semibold rounded-xl hover:bg-teal-800 transition-colors border-2 border-white/20"
+                            >
+                                Get In Touch
+                            </a>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
         </div>
-        
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-black/5 bg-white p-6 text-left shadow-sm">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Experience Highlights</h3>
-            <ul className="space-y-2 text-gray-700 text-sm leading-relaxed">
-              <li>✅ Built full-stack apps with Next.js App Router, TypeScript, and MongoDB.</li>
-              <li>✅ Implemented form validation with React Hook Form + Zod across pages.</li>
-              <li>✅ Designed modern, responsive UIs with TailwindCSS and motion effects.</li>
-              <li>✅ Created clean API routes and Mongoose models with proper validation.</li>
-            </ul>
-          </div>
-
-          <div className="rounded-2xl border border-black/5 bg-white p-6 text-left shadow-sm">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Core Values</h3>
-            <div className="flex flex-wrap gap-2">
-              {["Clean Code", "Ownership", "Performance", "Accessibility", "Collaboration"].map((value) => (
-                <span key={value} className="px-3 py-1.5 rounded-full text-xs font-medium bg-teal-50 text-teal-700 border border-teal-200">
-                  {value}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-10 text-left">
-          <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center md:text-left">Currently Learning</h3>
-          <div className="flex flex-wrap justify-center md:justify-start gap-2.5">
-            {["Advanced TypeScript Patterns", "Next.js Image & Perf", "Database Indexing", "Testing (Vitest/Jest)", "CI/CD Basics"].map((topic) => (
-              <span key={topic} className="px-3 py-1.5 rounded-full text-xs font-medium bg-white border border-black/5 shadow-sm">
-                {topic}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-12 flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="/project" className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-teal-600 text-white hover:bg-teal-700 transition">View Projects</a>
-          <a href="/contact" className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-teal-600 text-teal-700 hover:bg-teal-600 hover:text-white transition">Contact Me</a>
-        </div>
-      </motion.div>
-    </div>
-  );
+    );
 }
