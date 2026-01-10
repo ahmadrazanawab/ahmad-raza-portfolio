@@ -63,7 +63,7 @@ export default function Timeline() {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
             Experience & Education
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
