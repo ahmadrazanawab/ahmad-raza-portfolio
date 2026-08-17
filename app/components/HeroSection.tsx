@@ -15,10 +15,15 @@ const HeroSection = () => {
         "TailwindCSS",
     ];
 
+    // const stats = [
+    //     { value: "1 Year", label: "Months Experience", icon: "💼" },
+    //     { value: "20+", label: "Projects Built", icon: "🚀" },
+    //     { value: "Currently", label: "Working", icon: "✨" },
+    // ];
     const stats = [
-        { value: "9+", label: "Months Experience", icon: "💼" },
+        { value: "1+ Year", label: "Professional Experience", icon: "💼" },
         { value: "20+", label: "Projects Built", icon: "🚀" },
-        { value: "Currently", label: "Working", icon: "✨" },
+        { value: "Open", label: "To Opportunities", icon: "✨" },
     ];
 
     return (
@@ -83,7 +88,7 @@ const HeroSection = () => {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
                             <a
-                                href="/resume/Md-Ahmad-Raza-2026-01-09.pdf"
+                                href="/resume/Md_Ahmad_Raza_Resume_14_6_2026.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300"

@@ -12,28 +12,38 @@ const faqData: FAQItem[] = [
     {
         question: "What is your current role and experience?",
         answer:
-            "I am a Full Stack Developer with 9 months of professional experience at Al-Mawa International (OPC) Limited, where I work on building scalable and user-friendly web applications using modern technologies."
+            "I am a Full Stack Developer with 1+ year of professional experience. I worked at Al-Mawa International (OPC) Limited, where I developed and maintained web applications using modern frontend and backend technologies."
     },
     {
         question: "Which technologies do you work with?",
         answer:
-            "My core tech stack includes Next.js, React, TypeScript, Tailwind CSS on the frontend, and Node.js, Express, REST APIs, and databases on the backend. I also use Git and GitHub for version control."
+            "My primary technologies include React.js, Next.js, TypeScript, Tailwind CSS, Node.js, Express.js, MongoDB, PostgreSQL, REST APIs, JWT authentication, Git, and GitHub."
     },
     {
         question: "Are you currently studying?",
         answer:
-            "Yes, I am currently pursuing my Master of Computer Applications (MCA), Semester 2, from Dr. P. A. Inamdar University, expected to be completed in 2026."
+            "Yes. I am currently pursuing my Master of Computer Applications (MCA), 3rd Semester, from Dr. P. A. Inamdar University, Pune, while continuing to strengthen my software development and problem-solving skills."
+    },
+    {
+        question: "Are you currently working?",
+        answer:
+            "I am currently not employed. My previous role as a Full Stack Developer ended in June 2026, and I am actively looking for a full-time software development opportunity."
     },
     {
         question: "What type of roles are you looking for?",
         answer:
-            "I am looking for full-time opportunities as a Full Stack Developer or Frontend-focused Full Stack role where I can contribute to real-world products and continue learning."
+            "I am primarily looking for full-time opportunities as a Full Stack Developer, React.js Developer, or Next.js Developer where I can contribute to real-world products and continue growing as a software engineer."
     },
     {
-        question: "Are you open to internships, freelance, or remote work?",
+        question: "Are you open to remote or on-site opportunities?",
         answer:
-            "Yes, I am open to internships, freelance projects, and remote or on-site opportunities that allow me to grow professionally and deliver value to the team."
-    }
+            "Yes. I am open to remote, hybrid, and on-site full-time opportunities, depending on the role, company, and location."
+    },
+    {
+        question: "What are you currently focusing on?",
+        answer:
+            "I am currently preparing for software development placements, strengthening my skills in React.js, Next.js, TypeScript, Node.js, databases, and Data Structures and Algorithms."
+    },
 ];
 
 export default function FAQSection() {
@@ -93,8 +103,8 @@ export default function FAQSection() {
                             >
                                 <div className="flex items-start gap-4 flex-1">
                                     <div className={`w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 ${openIndex === index
-                                            ? "bg-gradient-to-br from-teal-500 to-cyan-500"
-                                            : "bg-gray-100 group-hover:bg-teal-50"
+                                        ? "bg-gradient-to-br from-teal-500 to-cyan-500"
+                                        : "bg-gray-100 group-hover:bg-teal-50"
                                         }`}>
                                         <MessageCircle className={`w-4 h-4 transition-colors duration-300 ${openIndex === index ? "text-white" : "text-gray-600 group-hover:text-teal-600"
                                             }`} />

@@ -6,36 +6,122 @@ import { User, Code2, Target, Zap, BookOpen, Lightbulb } from "lucide-react";
 export default function AboutSection() {
     const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
+
     const highlights = [
         {
             id: 1,
             icon: User,
             title: "Professional Experience",
-            desc: "Full Stack Developer with 9 months of hands-on experience in real-world projects and production environments.",
+            desc: "1+ year of professional experience as a Full Stack Developer, working with modern web technologies and real-world applications.",
             color: "from-cyan-500 to-blue-500",
         },
         {
             id: 2,
             icon: Code2,
-            title: "Tech Stack",
-            desc: "Next.js, React, TypeScript, Tailwind CSS, Node.js, Express, MongoDB, Git & REST APIs.",
+            title: "Full Stack Skills",
+            desc: "React.js, Next.js, TypeScript, Tailwind CSS, Node.js, Express.js, MongoDB, PostgreSQL, REST APIs, Git & GitHub.",
             color: "from-blue-500 to-purple-500",
         },
         {
             id: 3,
             icon: Target,
-            title: "Career Goal",
-            desc: "To become a strong full-stack engineer and build scalable, meaningful digital products.",
+            title: "Currently Seeking",
+            desc: "Open to full-time software development opportunities where I can contribute my skills, learn continuously, and grow as a Full Stack Developer.",
             color: "from-purple-500 to-pink-500",
         },
     ];
+    // const skills = [
+    //     { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+    //     { category: "Backend", items: ["Node.js", "Express", "MongoDB", "REST APIs"] },
+    //     { category: "Tools", items: ["Git", "GitHub", "VS Code", "Figma"] },
+    // ];
 
     const skills = [
-        { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
-        { category: "Backend", items: ["Node.js", "Express", "MongoDB", "REST APIs"] },
-        { category: "Tools", items: ["Git", "GitHub", "VS Code", "Figma"] },
+        {
+            category: "Frontend",
+            items: [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "React.js",
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "shadcn/ui",
+                "Redux Toolkit",
+                "React Hook Form",
+                "Zod",
+            ],
+        },
+        {
+            category: "Backend",
+            items: [
+                "Node.js",
+                "Express.js",
+                "REST APIs",
+                "JWT Authentication",
+                "Role-Based Access Control",
+                "Nodemailer",
+                "Cloudinary",
+            ],
+        },
+        {
+            category: "Databases",
+            items: [
+                "MongoDB",
+                "MongoDB Atlas",
+                "Mongoose",
+                "PostgreSQL",
+                "Prisma",
+                "MySQL",
+            ],
+        },
+        {
+            category: "State & Data",
+            items: [
+                "Redux Toolkit",
+                "Context API",
+                "TanStack Query",
+                "Axios",
+                "SWR",
+            ],
+        },
+        {
+            category: "Tools & Development",
+            items: [
+                "Git",
+                "GitHub",
+                "VS Code",
+                "Postman",
+                "npm",
+                "Vite",
+                "ESLint",
+                "Prettier",
+            ],
+        },
+        {
+            category: "Deployment & Services",
+            items: [
+                "Vercel",
+                "GitHub",
+                "MongoDB Atlas",
+                "Neon",
+                "Cloudinary",
+            ],
+        },
+        {
+            category: "Programming & CS",
+            items: [
+                "JavaScript",
+                "TypeScript",
+                "Java",
+                "Python",
+                "OOP",
+                "Data Structures & Algorithms",
+                "Problem Solving",
+            ],
+        },
     ];
-
     return (
         <section className="relative w-full bg-slate-50 px-4 sm:px-6 py-16 sm:py-20 md:py-6">
             <div className="max-w-6xl mx-auto">
@@ -59,9 +145,16 @@ export default function AboutSection() {
                                 icon: Lightbulb,
                                 text: (
                                     <>
-                                        I am a passionate <span className="font-semibold text-cyan-700">Full Stack Developer</span> with
-                                        <span className="font-semibold text-cyan-700"> 9 months of professional experience</span> at
-                                        Al-Mawa International (OPC) Limited, building scalable and user-friendly web applications.
+                                        I am a passionate{" "}
+                                        <span className="font-semibold text-cyan-700">
+                                            Full Stack Developer
+                                        </span>{" "}
+                                        with{" "}
+                                        <span className="font-semibold text-cyan-700">
+                                            1+ year of professional experience
+                                        </span>{" "}
+                                        at Al-Mawa International (OPC) Limited, where I worked on
+                                        scalable and user-friendly web applications.
                                     </>
                                 ),
                             },
@@ -69,9 +162,15 @@ export default function AboutSection() {
                                 icon: Code2,
                                 text: (
                                     <>
-                                        My core tech stack includes <span className="font-semibold text-blue-700">Next.js, React, TypeScript, Tailwind CSS</span> on
-                                        the frontend and <span className="font-semibold text-cyan-700">Node.js, Express, and databases</span> on
-                                        the backend.
+                                        My core tech stack includes{" "}
+                                        <span className="font-semibold text-blue-700">
+                                            React.js, Next.js, TypeScript, and Tailwind CSS
+                                        </span>{" "}
+                                        for frontend development, along with{" "}
+                                        <span className="font-semibold text-cyan-700">
+                                            Node.js, Express.js, MongoDB, and PostgreSQL
+                                        </span>{" "}
+                                        for backend development.
                                     </>
                                 ),
                             },
@@ -79,8 +178,12 @@ export default function AboutSection() {
                                 icon: BookOpen,
                                 text: (
                                     <>
-                                        I am currently pursuing my <span className="font-semibold text-purple-700">MCA (Semester 2)</span> from
-                                        Dr. P. A. Inamdar University, continuously improving my software engineering skills.
+                                        I am currently pursuing my{" "}
+                                        <span className="font-semibold text-purple-700">
+                                            MCA (3rd Semester)
+                                        </span>{" "}
+                                        from Dr. P. A. Inamdar University, while continuously
+                                        strengthening my development and problem-solving skills.
                                     </>
                                 ),
                             },
@@ -88,8 +191,12 @@ export default function AboutSection() {
                                 icon: Zap,
                                 text: (
                                     <>
-                                        My goal is to grow as a <span className="font-semibold text-pink-600">skilled full-stack engineer</span> and
-                                        contribute to impactful, real-world products.
+                                        I am currently{" "}
+                                        <span className="font-semibold text-pink-600">
+                                            looking for a full-time software development opportunity
+                                        </span>{" "}
+                                        where I can contribute my skills, gain experience, and grow
+                                        as a full-stack engineer.
                                     </>
                                 ),
                             },
