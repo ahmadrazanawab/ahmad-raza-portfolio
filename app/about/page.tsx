@@ -55,16 +55,58 @@ export default function AboutPage() {
                         {/* Left Column - About */}
                         <motion.div variants={itemVariants} className="lg:col-span-2 space-y-8">
                             <div>
-                                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">About Me</h2>
+                                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                                    About Me
+                                </h2>
+
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
                                     <p className="text-base sm:text-lg">
-                                        I&apos;m a dedicated Full Stack Developer with 9+ months of hands-on experience building modern, responsive web applications. My expertise lies in the MERN stack, complemented by proficiency in Next.js, TypeScript, and PostgreSQL.
+                                        I&apos;m a{" "}
+                                        <span className="font-semibold text-cyan-700">
+                                            Full Stack Developer
+                                        </span>{" "}
+                                        with around{" "}
+                                        <span className="font-semibold text-cyan-700">
+                                            1 year of professional experience
+                                        </span>
+                                        , having worked on real-world web applications using React.js,
+                                        Next.js, TypeScript, Node.js, Express.js, MongoDB, PostgreSQL,
+                                        and Tailwind CSS.
                                     </p>
+
                                     <p className="text-base sm:text-lg">
-                                        What drives me is the intersection of elegant user interfaces and robust backend architecture. I believe that great software isn&apos;t just functional—it&apos;s intuitive, performant, and maintainable. Every line of code I write is an opportunity to solve real problems and create meaningful digital experiences.
+                                        During my professional experience, I worked on full-stack
+                                        applications involving{" "}
+                                        <span className="font-semibold text-blue-700">
+                                            REST APIs, authentication, role-based access, database
+                                            integration, file uploads, and responsive web interfaces.
+                                        </span>{" "}
+                                        I have also built multiple projects that strengthened my
+                                        practical frontend and backend development skills.
                                     </p>
+
                                     <p className="text-base sm:text-lg">
-                                        Beyond technical skills, I bring a growth mindset and collaborative spirit to every project. I&apos;m constantly exploring emerging technologies, refining best practices, and contributing to the developer community. My goal is to build software that makes a tangible impact while continuously evolving as an engineer.
+                                        I am currently pursuing my{" "}
+                                        <span className="font-semibold text-purple-700">
+                                            Master of Computer Applications (MCA), 2nd Year, 3rd
+                                            Semester
+                                        </span>{" "}
+                                        at Dr. P. A. Inamdar University, Pune. Alongside my academics,
+                                        I am strengthening my skills in{" "}
+                                        <span className="font-semibold text-purple-700">
+                                            Data Structures & Algorithms, problem solving, databases,
+                                            and software engineering.
+                                        </span>
+                                    </p>
+
+                                    <p className="text-base sm:text-lg">
+                                        I am currently{" "}
+                                        <span className="font-semibold text-pink-600">
+                                            looking for a full-time software development opportunity
+                                        </span>{" "}
+                                        where I can apply my skills, contribute to real-world projects,
+                                        learn from experienced professionals, and grow as a Full Stack
+                                        Engineer.
                                     </p>
                                 </div>
                             </div>
@@ -135,19 +177,22 @@ export default function AboutPage() {
                                 <ul className="space-y-3 text-sm text-gray-700">
                                     <li className="flex gap-2">
                                         <span className="text-teal-600 font-bold">•</span>
-                                        <span>9+ months of professional development experience</span>
+                                        <span>Around 1 year of professional Full Stack Development experience</span>
                                     </li>
+
                                     <li className="flex gap-2">
                                         <span className="text-teal-600 font-bold">•</span>
-                                        <span>Built full-stack applications from concept to deployment</span>
+                                        <span>Built and contributed to full-stack web applications using modern technologies</span>
                                     </li>
+
                                     <li className="flex gap-2">
                                         <span className="text-teal-600 font-bold">•</span>
-                                        <span>Implemented complex form validations with React Hook Form and Zod</span>
+                                        <span>Developed responsive interfaces using React.js, Next.js, TypeScript, and Tailwind CSS</span>
                                     </li>
+
                                     <li className="flex gap-2">
                                         <span className="text-teal-600 font-bold">•</span>
-                                        <span>Designed RESTful APIs with proper authentication and validation</span>
+                                        <span>Developed REST APIs with authentication, validation, database integration, and role-based access</span>
                                     </li>
                                 </ul>
                             </div>
@@ -215,10 +260,10 @@ export default function AboutPage() {
                         className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6"
                     >
                         {[
-                            { number: "9+", label: "Months Experience" },
-                            { number: "15+", label: "Projects Completed" },
-                            { number: "10+", label: "Technologies Mastered" },
-                            { number: "100%", label: "Commitment to Quality" }
+                            { number: "1+", label: "Year Experience" },
+                            { number: "20+", label: "Projects Built" },
+                            { number: "10+", label: "Technologies Used" },
+                            { number: "Open", label: "To Opportunities" }
                         ].map((stat, index) => (
                             <div key={index} className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-xl p-6 text-center">
                                 <div className="text-3xl sm:text-4xl font-bold text-teal-600 mb-2">{stat.number}</div>
